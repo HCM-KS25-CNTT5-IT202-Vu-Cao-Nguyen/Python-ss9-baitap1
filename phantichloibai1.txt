@@ -1,0 +1,18 @@
+delivery_orders.insert(0, "GE000") dòng này sẽ chèn GE000 vào ngay vị trí 0 và đẩy các vị trí kia lên +1
+
+delivery_orders[1] = "GE002-UPDATED" dòng này sửa sai đơn hàng cần cập nhập vì sau khi chèn GE000 vào vị trí đã
+thay đổi nên ta cần sửa lại thành delivery_orders[2] = "GE002-UPDATED"
+
+Sau khi chèn GE000 vào thì GE002 đang nằm ở index = 2
+delivery_orders.remove(3) gây lỗi vì remove tìm giá trị không phải tìm vị trí nên nó sẽ tìm giá trị bằng 3
+để xóa và không thấy thì báo lỗi
+
+phương thước remove xóa theo giá trị không xóa theo vị trí
+muốn xóa đơn hàng GE003-CANCEL thì ta viết delivery_orders.remove("GE003-CANCEL")
+
+phương thức pop có tác dụng xóa phần tử đó đi và trả về lại giá trị của nó
+
+muốn lưu lại đơn hàng cần lấy ra ta cần viết như sau
+
+x = orders.pop(1)
+
